@@ -1,0 +1,67 @@
+/*css*/
+body {
+}
+
+.grid-container {
+  display: grid;
+  /*
+  gap mean distane between element
+  */
+  grid-gap: 10px;
+  /*
+  هنا هتحكم في اماكن العناصر جوا grid
+  */
+  grid-template-areas:
+    "hd hd hd hd" /* ده اول صف*/
+    "ad mn mn mn" /*secoond row */
+    "ad mn mn mn"
+    "ad mn mn mn "
+    "ft ft ft ft";
+}
+.grid-container > * {
+  padding: 30px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+header {
+  grid-area: hd;
+}
+
+.ul-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  margin: 10px;
+}
+
+main {
+  grid-area: mn;
+}
+
+aside {
+  grid-area: ad;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+
+  grid-auto-rows: minmax(50px, auto);
+}
+aside p {
+  border: 2px solid white;
+}
+footer {
+  grid-area: ft;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+.social li {
+  margin: 10px;
+  padding: 10px;
+}
